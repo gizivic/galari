@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="otogalariModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="otogalariEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="müsteri" EntityType="otogalariModel.müsteri" />
+    <EntitySet Name="otomobil" EntityType="otogalariModel.otomobil" />
+    <EntitySet Name="sysdiagrams" EntityType="otogalariModel.sysdiagrams" />
+    <AssociationSet Name="FK_otomobil_müsteri" Association="otogalariModel.FK_otomobil_müsteri">
+      <End Role="müsteri" EntitySet="müsteri" />
+      <End Role="otomobil" EntitySet="otomobil" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="müsteri">
+    <Key>
+      <PropertyRef Name="müsteriID" />
+    </Key>
+    <Property Name="müsteriID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="mAdi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="mSoyadi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="mOtoID" Type="Int32" Nullable="false" />
+    <Property Name="mOtoadi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="otomobil" Relationship="otogalariModel.FK_otomobil_müsteri" FromRole="müsteri" ToRole="otomobil" />
+  </EntityType>
+  <EntityType Name="otomobil">
+    <Key>
+      <PropertyRef Name="otoID" />
+    </Key>
+    <Property Name="otoID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="otomarkasi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="müsteriID" Type="Int32" Nullable="false" />
+    <Property Name="satis" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="müsteri" Relationship="otogalariModel.FK_otomobil_müsteri" FromRole="otomobil" ToRole="müsteri" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_otomobil_müsteri">
+    <End Role="müsteri" Type="otogalariModel.müsteri" Multiplicity="1" />
+    <End Role="otomobil" Type="otogalariModel.otomobil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="müsteri">
+        <PropertyRef Name="müsteriID" />
+      </Principal>
+      <Dependent Role="otomobil">
+        <PropertyRef Name="müsteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

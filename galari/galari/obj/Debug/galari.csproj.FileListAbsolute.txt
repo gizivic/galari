@@ -1,0 +1,55 @@
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\obj\Debug\galari.csprojResolveAssemblyReference.cache
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\galari.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\galari.pdb
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\Antlr3.Runtime.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\EntityFramework.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\Microsoft.Web.Infrastructure.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\Newtonsoft.Json.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Mvc.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Optimization.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Providers.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Razor.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.Deployment.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.Razor.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\WebGrease.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\EntityFramework.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\Newtonsoft.Json.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Mvc.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.Razor.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.Deployment.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\bin\System.Web.WebPages.Razor.xml
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\obj\Debug\galari.dll
+c:\users\gizem\documents\visual studio 2012\Projects\galari\galari\obj\Debug\galari.pdb
+E:\galari\galari\bin\galari.dll.config
+E:\galari\galari\bin\galari.dll
+E:\galari\galari\bin\galari.pdb
+E:\galari\galari\bin\Antlr3.Runtime.dll
+E:\galari\galari\bin\EntityFramework.dll
+E:\galari\galari\bin\Microsoft.Web.Infrastructure.dll
+E:\galari\galari\bin\Newtonsoft.Json.dll
+E:\galari\galari\bin\System.Net.Http.Formatting.dll
+E:\galari\galari\bin\System.Web.Http.dll
+E:\galari\galari\bin\System.Web.Http.WebHost.dll
+E:\galari\galari\bin\System.Web.Mvc.dll
+E:\galari\galari\bin\System.Web.Optimization.dll
+E:\galari\galari\bin\System.Web.Providers.dll
+E:\galari\galari\bin\System.Web.Razor.dll
+E:\galari\galari\bin\System.Web.WebPages.Deployment.dll
+E:\galari\galari\bin\System.Web.WebPages.dll
+E:\galari\galari\bin\System.Web.WebPages.Razor.dll
+E:\galari\galari\bin\WebGrease.dll
+E:\galari\galari\bin\EntityFramework.xml
+E:\galari\galari\bin\Newtonsoft.Json.xml
+E:\galari\galari\bin\System.Net.Http.Formatting.xml
+E:\galari\galari\bin\System.Web.Http.xml
+E:\galari\galari\bin\System.Web.Http.WebHost.xml
+E:\galari\galari\bin\System.Web.Mvc.xml
+E:\galari\galari\bin\System.Web.Razor.xml
+E:\galari\galari\bin\System.Web.WebPages.xml
+E:\galari\galari\bin\System.Web.WebPages.Deployment.xml
+E:\galari\galari\bin\System.Web.WebPages.Razor.xml
+E:\galari\galari\obj\Debug\galari.csprojResolveAssemblyReference.cache
+E:\galari\galari\obj\Debug\galari.dll
+E:\galari\galari\obj\Debug\galari.pdb

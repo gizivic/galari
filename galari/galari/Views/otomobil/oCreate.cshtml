@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "oCreate";
+}
+
+<h2>oCreate</h2>
+
+@model galari.viewmodel.otomobilviewmodel
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div id="userMessage"></div>
+<div></div>
+
+<br />
+
+@using (Ajax.BeginForm("oCreate", "otomobil", FormMethod.Post, new AjaxOptions { OnSuccess="succes"}))
+{  
+    <p>otomobil markası</p>
+    <br />  
+    @Html.TextBoxFor(o=>o.otomobilmarkasi)
+    <br />  
+    <p>otomobil ID</p>
+    <br />  
+    @Html.TextBoxFor(o=>o.OtoID)
+    <br />
+    <p>satıs</p>
+    <br />  
+    @Html.TextBoxFor(o=>o.satis)
+    <br />  
+    <p>satılan müsteri ID</p>
+    <br />  
+    @Html.TextBoxFor(o=>o.müsteriID)
+
+    <br />
+    <input type="submit"  value=" KAYDET" />
+}
+@section scipts
+{
+    
+    <script type="text/javascript">
+        function success(result)
+        {
+        
+            if (result.IsSuccss == true) {
+
+                $("form")[0].reset();
+            }
+            $("#userMessage").html(result.UserMessage);
+        
+        }
+
+    </script>
+    
+    
+    }
+
+
+
+yeni otomobil eklem ekranı

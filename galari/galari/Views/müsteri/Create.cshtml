@@ -1,0 +1,55 @@
+﻿
+@model galari.viewmodel.müsteriviewmodel
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div id="userMessage"></div>
+<div></div>
+
+<br />
+
+@using (Ajax.BeginForm("Create", "müsteri", FormMethod.Post, new AjaxOptions { OnSuccess="succes"}))
+{  
+    <p>isim</p>
+    <br />  
+    @Html.TextBoxFor(m=>m.mAdi)
+    <br />  
+    <p>soyisim</p>
+    <br />  
+    @Html.TextBoxFor(m=>m.mSoyadi)
+    <br />
+    <p>otomobil ID</p>
+    <br />  
+    @Html.TextBoxFor(m=>m.mOtoID)
+    <br />  
+    <p>otomabil markası</p>
+    <br />  
+    @Html.TextBoxFor(m=>m.mOtoadi)
+
+    <br />
+    <input type="submit"  value=" KAYDET" />
+}
+@section scipts
+{
+    
+    <script type="text/javascript">
+        function success(result)
+        {
+        
+            if (result.IsSuccss == true) {
+
+                $("form")[0].reset();
+            }
+            $("#userMessage").html(result.UserMessage);
+        
+        }
+
+    </script>
+    
+    
+    }

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="otogalariModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="otogalariModelStoreContainer">
+    <EntitySet Name="müsteri" EntityType="otogalariModel.Store.müsteri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="otomobil" EntityType="otogalariModel.Store.otomobil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="otogalariModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_otomobil_müsteri" Association="otogalariModel.Store.FK_otomobil_müsteri">
+      <End Role="müsteri" EntitySet="müsteri" />
+      <End Role="otomobil" EntitySet="otomobil" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="müsteri">
+    <Key>
+      <PropertyRef Name="müsteriID" />
+    </Key>
+    <Property Name="müsteriID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="mAdi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mSoyadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mOtoID" Type="int" Nullable="false" />
+    <Property Name="mOtoadi" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="otomobil">
+    <Key>
+      <PropertyRef Name="otoID" />
+    </Key>
+    <Property Name="otoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="otomarkasi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="müsteriID" Type="int" Nullable="false" />
+    <Property Name="satis" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_otomobil_müsteri">
+    <End Role="müsteri" Type="otogalariModel.Store.müsteri" Multiplicity="1" />
+    <End Role="otomobil" Type="otogalariModel.Store.otomobil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="müsteri">
+        <PropertyRef Name="müsteriID" />
+      </Principal>
+      <Dependent Role="otomobil">
+        <PropertyRef Name="müsteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
